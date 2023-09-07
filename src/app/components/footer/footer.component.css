@@ -1,0 +1,38 @@
+.footer-group {
+  background: rgba(75, 78, 109, 0.2);
+  padding: 1em 1.5em;
+  color: var(--txt-secondary);
+  position: relative;
+}
+
+.footer-bg {
+  position: absolute;
+  top: -20%;
+  left: 0%;
+  height: 120%;
+}
+
+.first-row {
+  display: grid;
+  grid-template-columns: 0.4fr repeat(3, 0.8fr) 1fr;
+  justify-content: end;
+  align-items: baseline;
+  gap: 0em 03em;
+  width: 100%;
+}
+
+.first-row > ul > li {
+  font-size: 0.8em;
+}
+
+
+.copyright {
+  display: block;
+  margin: 3vh auto;
+  width: 100%;
+}
+
+.copyright p {
+  text-align: center;
+  font-size: 0.7em;
+}

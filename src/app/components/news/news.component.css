@@ -1,0 +1,51 @@
+.banner-wrap {
+  position: relative;
+}
+
+.banner-wrap img {
+  margin: auto;
+  border-radius: 6px;
+}
+
+.news-list {
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
+.news-list ul li {
+  border-bottom: 0.4px solid rgba(0, 0, 0, 0.2);
+  padding: 0.5em 0.1em;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  cursor: pointer;
+}
+
+.news-list ul li h4 {
+  font-size: 0.9em;
+  width: 100%;
+}
+
+.news-list ul li span {
+  font-size: 0.5em;
+  text-align: right;
+}
+
+.news-list ul li p {
+  font-size: 0.85em;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 50px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.3);
+}

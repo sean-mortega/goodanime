@@ -1,0 +1,134 @@
+.card {
+  width: 150px;
+  height: 200px;
+  perspective: 1000px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-right: -50px; /* Negative margin to overlap cards */
+  transition: transform 1s ease-in-out;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+.card.expanded {
+  transform: translateX(-50px); /* Move the expanded cards to the left */
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.rankBadge {
+  opacity: 1 !important;
+  font-size: 1.5em;
+  font-weight: 900;
+  z-index: 3;
+  width: 20%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff !important;
+  background-color: var(--bg-primary);
+  border-bottom-right-radius: 100px;
+}
+
+.card-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.card-front {
+  /* Overlay styles */
+  background: linear-gradient(45deg, black 30%, purple 100%);
+  position: relative;
+  color: white;
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  flex-direction: column;
+  padding: 0.2em 0.7em;
+}
+
+.card-front .overlay {
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  background-position: bottom, right;
+}
+
+.card-front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  z-index: 1;
+  opacity: 0.8;
+  clip-path: polygon(29% 0, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.card-front .title {
+  z-index: 2;
+  display: block;
+  text-shadow: -2px 3px 15px rgba(21, 13, 25, 0.48);
+}
+
+.card-back {
+  /* Content styles */
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5em;
+}
+
+.movie-types {
+  color: rgba(255, 255, 255, 0.9) !important;
+  z-index: 5;
+  font-size: 1.2em;
+}
+
+.details {
+  font-size: 0.8em;
+  color: #fff;
+}
+.ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  overflow: ellipsis;
+  -webkit-line-clamp: 3; /* Number of lines */
+}
+
+.favorite {
+  background: var(--bg-secondary);
+  display: flex;
+  place-content: center;
+  padding: 0.3em;
+  z-index: 4 !important;
+  width: 30px;
+  height: 30px;
+  border: 0px solid transparent;
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+
+.favorite span {
+  color: var(--bg-primary);
+}

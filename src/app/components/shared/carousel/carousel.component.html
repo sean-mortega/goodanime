@@ -1,0 +1,25 @@
+<div class="carousel">
+  <div *ngFor="let slide of slidesData" #carouselSlide class="carousel-slide">
+    <img [src]="slide.img" alt="banner img" [srcset]="slide.img" />
+    <div class="contents">
+      <h1 class="mt-1 mb-1">{{ slide.title }}</h1>
+      <p class="mt-1 mb-1">{{ slide.desc }}</p>
+      <app-buttons
+        [btn_name]="slide.ctaText"
+        [btn_style]="slide.ctaBg"
+      ></app-buttons>
+    </div>
+  </div>
+
+  <div class="crumbs-group">
+    <div
+      *ngFor="let crumb of crumbs; let i = index"
+      class="crumbs"
+      [class.active]="i === currentIndex"
+      (click)="goToSlide(i)"
+    >
+      &nbsp;
+    </div>
+  </div>
+  
+</div>
